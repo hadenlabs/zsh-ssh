@@ -3,7 +3,7 @@ zsh-peco-ssh-connect
 
 |Build Status| |GitHub issues| |GitHub license|
 
-:Version: 0.0.0
+:Version: 0.1.0
 :Web: https://github.com/luismayta/zsh-peco-ssh-connect
 :Download: http://github.com/luismayta/zsh-peco-ssh-connect
 :Source: http://github.com/luismayta/zsh-peco-ssh-connect
