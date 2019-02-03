@@ -16,7 +16,7 @@
 
 if (( $+commands[peco] )); then
     function ssh-history() {
-        cat "$HISTFILE" | grep -E "^ssh\s" | sed -e 's/\s*$//' | sort | uniq -c | sort -nr | sed -e "s/^\s*[0-9]*\s//"
+        cat "$HISTFILE" | grep -E "^ssh\s" | sort -nr | uniq
     }
     function peco_ssh_connect() {
         BUFFER=$(fc -l -n 1 | ssh-history | \
