@@ -3,23 +3,24 @@ FROM python:3.6.4-alpine
 MAINTAINER Luis Mayta <@slovacus>
 
 ARG stage
-ARG version
 
 LABEL NAME zsh-peco-ssh-connect-app-$stage
-LABEL VERSION $version
 
 ENV PACKAGES bash \
-        build-base \
-        git \
-        gcc \
-        libc-dev \
-        libmagic \
-        linux-headers \
-        make \
-        musl-dev \
-        openssl \
-        pcre-dev \
-        zlib-dev
+  zsh \
+  curl \
+  bison \
+  build-base \
+  git \
+  gcc \
+  libc-dev \
+  libmagic \
+  linux-headers \
+  make \
+  musl-dev \
+  openssl \
+  pcre-dev \
+  zlib-dev
 
 COPY ./requirements/ /usr/src/requirements/
 COPY ./requirements.txt /usr/src/requirements.txt
