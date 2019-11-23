@@ -5,7 +5,7 @@
 # Defines peco ssh connect and provides easy command line file and folder sharing.
 #
 # Requirements:
-#  - peco: https://github.com/peco/peco
+#  - fzf: https://github.com/junegunn/fzf
 #  - zsh: https://www.zsh.org/
 #
 # Based on: https://github.com/gko/ssh-connect
@@ -14,18 +14,52 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 
-if (( $+commands[peco] )); then
-    function ssh-history() {
-        cat "$HISTFILE" | grep -E "^ssh\s" | sort -nr | uniq
-    }
-    function peco_ssh_connect() {
-        BUFFER=$(fc -l -n 1 | ssh-history | \
-                     peco --layout=bottom-up --query "$LBUFFER")
+ssh_package_name=fzf
 
-        CURSOR=$#BUFFER # move cursor
-        zle -R -c       # refresh
-    }
+plugin_dir=$(dirname "${0}":A)
 
-    zle -N peco_ssh_connect
-    bindkey '^F' peco_ssh_connect
+# shellcheck source=/dev/null
+source "${plugin_dir}"/src/helpers/messages.zsh
+
+# shellcheck source=/dev/null
+source "${plugin_dir}"/src/helpers/tools.zsh
+
+# ripgrep::install - install ripgrep
+function ripgrep::install {
+    if [ -x "$(command which brew)" ]; then
+        brew install ripgrep
+    fi
+}
+
+# fzf::install - install fzf
+function fzf::install {
+    if [ -x "$(command which brew)" ]; then
+        brew install fzf
+    fi
+}
+
+if ! type -p rg > /dev/null; then ripgrep::install; fi
+if ! type -p fzf > /dev/null; then fzf::install; fi
+
+if [ -x "$(command which rg)" ]; then
+    # Setting rg as the default source for fzf
+    export FZF_DEFAULT_COMMAND='rg --files'
+
+    # Apply the command to CTRL-T as well
+    export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 fi
+
+function ssh-history {
+    cat "${HISTFILE}" | grep -E "^ssh\s" | sort -nr | uniq
+}
+
+function ssh_connect {
+    BUFFER=$(fc -l -n 1 | ssh-history | \
+                 fzf-tmux --query="${LBUFFER}")
+
+    CURSOR=$#BUFFER # move cursor
+    zle -R -c       # refresh
+}
+
+zle -N ssh_connect
+bindkey '^F' ssh_connect
