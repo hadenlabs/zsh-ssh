@@ -17,9 +17,9 @@ replace = """
 
 [[files."CHANGELOG.rst"]]
 search = """
-.. _`Unreleased`: https://github.com/luismayta/zsh-peco-ssh-connect/compare/{{old_version}}...HEAD
+.. _`Unreleased`: https://github.com/luismayta/zsh-ssh-connect/compare/{{old_version}}...HEAD
 """
 replace = """
-.. _`Unreleased`: https://github.com/luismayta/zsh-peco-ssh-connect/compare/{{new_version}}...HEAD
-.. _`{{new_version}}`: https://github.com/luismayta/zsh-peco-ssh-connect/compare/{{old_version}}...{{new_version}}
+.. _`Unreleased`: https://github.com/luismayta/zsh-ssh-connect/compare/{{new_version}}...HEAD
+.. _`{{new_version}}`: https://github.com/luismayta/zsh-ssh-connect/compare/{{old_version}}...{{new_version}}
 """

@@ -6,7 +6,7 @@ OS := $(shell uname)
 .PHONY: help build up requirements clean lint test help
 .DEFAULT_GOAL := help
 
-PROJECT := zsh-peco-ssh-connect
+PROJECT := zsh-ssh-connect
 
 PYTHON_VERSION=3.6.4
 PYENV_NAME="${PROJECT}"
