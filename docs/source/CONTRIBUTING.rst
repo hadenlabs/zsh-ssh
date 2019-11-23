@@ -4,7 +4,7 @@ How To Contribute
 .. contents::
    :local:
 
-Contributions to zsh-nvm are welcome.
+Contributions to zsh-ssh-connect are welcome.
 
 Getting Started
 ---------------
@@ -140,5 +140,5 @@ Try to keep history as linear as possible using a `rebase` merge strategy.
 
 #. Delete merged Branch
 
-.. _Issue: https://github.com/luismayta/zsh-nvm/issues
-.. _Pull Request: https://github.com/luismayta/zsh-nvm/pulls
+.. _Issue: https://github.com/luismayta/zsh-ssh-connect/issues
+.. _Pull Request: https://github.com/luismayta/zsh-ssh-connect/pulls

@@ -6,7 +6,7 @@
 version: '3.6'
 services:
   app:
-    image: zsh-nvm-app-test
+    image: zsh-ssh-connect-app-test
     environment: &environment
       - STAGE=testing
     build:

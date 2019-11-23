@@ -3,7 +3,7 @@ FROM python:3.8.0-slim
 MAINTAINER Luis Mayta <@slovacus>
 
 ARG stage
-LABEL NAME zsh-nvm-check-$stage
+LABEL NAME zsh-ssh-connect-check-$stage
 
 COPY Pipfile* /usr/src/
 
