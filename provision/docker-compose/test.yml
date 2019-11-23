@@ -3,10 +3,10 @@
 #
 # Usage: test up
 
-version: "3"
+version: '3.6'
 services:
   app:
-    image: zsh-ssh-connect-app-test
+    image: zsh-nvm-app-test
     environment: &environment
       - STAGE=testing
     build:

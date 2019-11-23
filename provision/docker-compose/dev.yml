@@ -1,19 +1,18 @@
 # Docker Compose
 # https://docs.docker.com/compose/
-
-version: "3"
+version: '3.6'
 services:
   # Python
   app:
     environment: &environment
       - STAGE=local
-    image: zsh-ssh-connect-app-dev
+    image: zsh-nvm-app-dev
     build:
       args:
         stage: dev
 
   check:
-    image: zsh-ssh-connect-check-dev
+    image: zsh-nvm-check-dev
     environment: *environment
     build:
       context: .
