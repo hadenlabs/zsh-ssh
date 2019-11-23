@@ -4,7 +4,7 @@ MAINTAINER Luis Mayta <@slovacus>
 
 ARG stage
 
-LABEL NAME zsh-peco-ssh-connect-app-$stage
+LABEL NAME zsh-ssh-connect-app-$stage
 
 ENV PACKAGES bash \
   zsh \

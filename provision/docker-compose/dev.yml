@@ -7,13 +7,13 @@ services:
   app:
     environment: &environment
       - STAGE=local
-    image: zsh-peco-ssh-connect-app-dev
+    image: zsh-ssh-connect-app-dev
     build:
       args:
         stage: dev
 
   check:
-    image: zsh-peco-ssh-connect-check-dev
+    image: zsh-ssh-connect-check-dev
     environment: *environment
     build:
       context: .

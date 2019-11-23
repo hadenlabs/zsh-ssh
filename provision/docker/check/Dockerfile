@@ -3,7 +3,7 @@ FROM python:3.6.4
 MAINTAINER Luis Mayta <@slovacus>
 
 ARG stage
-LABEL NAME zsh-peco-ssh-connect-check-$stage
+LABEL NAME zsh-ssh-connect-check-$stage
 
 COPY ./requirements/ /usr/src/requirements/
 COPY ./requirements.txt /usr/src/requirements.txt
