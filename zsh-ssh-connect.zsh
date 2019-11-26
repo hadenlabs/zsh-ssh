@@ -49,6 +49,16 @@ if [ -x "$(command which rg)" ]; then
     export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 fi
 
+# assh::install - install assh
+function assh::install {
+    if [ -x "$(command which brew)" ]; then
+        brew install assh
+    fi
+}
+
+if ! type -p assh > /dev/null; then assh::install; fi
+if type -p assh > /dev/null; then alias ssh="assh wrapper ssh"; fi
+
 function ssh-history {
     cat "${HISTFILE}" | grep -E "^ssh\s" | sort -nr | uniq
 }
