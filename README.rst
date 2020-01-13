@@ -8,14 +8,7 @@ Functions and tools for zsh
     antibody bundle luismayta/zsh-ssh-connect
 
 
-|ci| |GitHub issues| |GitHub license|
-
-.. |ci| image:: https://travis-ci.org/luismayta/zsh-ssh-connect.svg
-   :target: https://travis-ci.org/luismayta/zsh-ssh-connect
-.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-ssh-connect.svg
-   :target: https://github.com/luismayta/zsh-ssh-connect/issues
-.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-   :target: LICENSE
+|Build Status| |GitHub issues| |GitHub license|
 
 :Version: 0.1.1
 :Web: https://github.com/luismayta/zsh-ssh-connect
@@ -37,8 +30,9 @@ Dependencies
 .. code-block:: bash
 
     https://github.com/mafredri/zsh-async
-    https://github.com/marzocchi/zsh-notify
+    https://github.com/luismayta/zsh-notify
     https://github.com/luismayta/zsh-functions
+
 
 Installation
 ------------
@@ -51,12 +45,12 @@ If you're using
 plugin by doing the following:
 
 1. Go to your oh-my-zsh custom plugins directory -
-   ``cd ~/.oh-my-zsh/custom/plugins``
+    ``cd ~/.oh-my-zsh/custom/plugins``
 2. Clone the plugin
-   ``bash   git clone https://github.com/luismayta/zsh-ssh-connect``\ bash
+    ``bash   git clone https://github.com/luismayta/zsh-ssh-connect``\ bash
 3. Edit your ``.zshrc`` and add
-   ``plugins=( ... zsh-ssh-connect )`` to your list of
-   plugins
+    ``plugins=( ... zsh-ssh-connect )`` to your list of
+    plugins
 4. Open a new terminal and enjoy!
 
 `antigen <https://github.com/zsh-users/antigen>`__ users
@@ -66,10 +60,10 @@ If you're using `Antigen <https://github.com/zsh-lovers/antigen>`__,
 install this plugin by doing the following:
 
 1. Add ``antigen bundle luismayta/zsh-ssh-connect`` to your
-   ``.zshrc`` where you're adding your other plugins.
+    ``.zshrc`` where you're adding your other plugins.
 2. Either open a new terminal to force zsh to load the new plugin, or
-   run ``antigen bundle luismayta/zsh-ssh-connect`` in a
-   running zsh session.
+    run ``antigen bundle luismayta/zsh-ssh-connect`` in a
+    running zsh session.
 3. Enjoy!
 
 `antibody <https://github.com/getantibody/antibody>`__ users
@@ -86,8 +80,8 @@ install this plugin by doing the following:
 
     to your ``.zshrc`` where you're adding your other plugins.
 2. Either open a new terminal to force zsh to load the new plugin, or
-   run ``antibody bundle luismayta/zsh-ssh-connect`` in a
-   running zsh session.
+    run ``antibody bundle luismayta/zsh-ssh-connect`` in a
+    running zsh session.
 3. Enjoy!
 
 Quick Start
@@ -102,7 +96,7 @@ Usage
 
 .. code-block:: bash
 
-  λ make setup
+    λ make setup
 
 Support
 -------
@@ -158,14 +152,14 @@ Feel free to contact me to discuss any issues, questions, or comments.
 
 |linkedin| |beacon| |made|
 
-Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
+Made with :coffee: and :pizza: by `luis mayta`_ and `equipindustry`_.
 
 .. Links
 .. _`changelog`: CHANGELOG.rst
 .. _`contributors`: AUTHORS
 .. _`contributing`: docs/source/CONTRIBUTING.rst
 
-.. _`hadenlabs`: https://github.com/hadenlabs
+.. _`equipindustry`: https://github.com/equipindustry
 .. _`luis mayta`: https://github.com/luismayta
 
 
@@ -177,17 +171,24 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`Website`: http://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
+.. |Build Status| image:: https://travis-ci.org/luismayta/zsh-ssh-connect.svg
+    :target: https://travis-ci.org/luismayta/zsh-ssh-connect
+.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-ssh-connect.svg
+    :target: https://github.com/luismayta/zsh-ssh-connect/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+    :target: LICENSE
+
 .. Team:
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
-   :target: https://github.com/luismayta
+    :target: https://github.com/luismayta
 
 .. Footer:
 .. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
-   :target: http://pe.linkedin.com/in/luismayta
+    :target: http://pe.linkedin.com/in/luismayta
 .. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/luismayta/zsh-ssh-connect/readme
-   :target: https://github.com/luismayta/zsh-ssh-connect
+    :target: https://github.com/luismayta/zsh-ssh-connect
 .. |made| image:: https://img.shields.io/badge/Made%20with-Zsh-1f425f.svg
-   :target: http://www.zsh.org
+    :target: http://www.zsh.org
 
 .. Dependences:
 
