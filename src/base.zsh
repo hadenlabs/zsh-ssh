@@ -113,8 +113,6 @@ if [ "$(node::exist)" -eq 0 ]; then node::install; fi
 if [ "$(ripgrep::exist)" -eq 0 ]; then ripgrep:install; fi
 if [ "$(assh::exist)" -eq 0 ]; then assh::install; fi
 
-if type -p assh > /dev/null; then alias ssh="assh wrapper ssh"; fi
-
 if ! type -p rg > /dev/null; then
     # Setting rg as the default source for fzf
     export FZF_DEFAULT_COMMAND='rg --files'
