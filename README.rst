@@ -1,12 +1,7 @@
 zsh-ssh-connect
 ===============
 
-Functions and tools for zsh
-
-.. code-block:: bash
-
-    antibody bundle luismayta/zsh-ssh-connect
-
+Functions and tools ssh with zsh
 
 |Build Status| |GitHub issues| |GitHub license|
 
@@ -30,7 +25,6 @@ Dependencies
 .. code-block:: bash
 
     https://github.com/mafredri/zsh-async
-    https://github.com/luismayta/zsh-notify
     https://github.com/luismayta/zsh-functions
 
 
@@ -96,7 +90,7 @@ Usage
 
 .. code-block:: bash
 
-    λ make setup
+  λ make setup
 
 Support
 -------
@@ -152,15 +146,15 @@ Feel free to contact me to discuss any issues, questions, or comments.
 
 |linkedin| |beacon| |made|
 
-Made with :coffee: and :pizza: by `luis mayta`_ and `equipindustry`_.
+Made with :coffee: and :pizza: by `Luis Mayta`_ and `equipindustry`_.
 
 .. Links
 .. _`changelog`: CHANGELOG.rst
-.. _`contributors`: AUTHORS
+.. _`contributors`: docs/source/AUTHORS.rst
 .. _`contributing`: docs/source/CONTRIBUTING.rst
 
 .. _`equipindustry`: https://github.com/equipindustry
-.. _`luis mayta`: https://github.com/luismayta
+.. _`Luis Mayta`: https://github.com/luismayta
 
 
 .. _`Github`: https://github.com/luismayta
@@ -168,7 +162,7 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `equipindustry`_.
 .. _`Email`: slovacus@gmail.com
     :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
-.. _`Website`: http://luismayta.github.io
+.. _`Website`: https://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
 .. |Build Status| image:: https://travis-ci.org/luismayta/zsh-ssh-connect.svg
@@ -180,11 +174,11 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `equipindustry`_.
 
 .. Team:
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
-    :target: https://github.com/luismayta
+   :target: https://github.com/luismayta
 
 .. Footer:
 .. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
-    :target: http://pe.linkedin.com/in/luismayta
+    :target: https://pe.linkedin.com/in/luismayta
 .. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/luismayta/zsh-ssh-connect/readme
     :target: https://github.com/luismayta/zsh-ssh-connect
 .. |made| image:: https://img.shields.io/badge/Made%20with-Zsh-1f425f.svg
