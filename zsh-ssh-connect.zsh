@@ -25,6 +25,9 @@ export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle luismayta/zsh-
 source "${SSH_SOURCE_PATH}"/base.zsh
 
 # shellcheck source=/dev/null
+source "${SSH_SOURCE_PATH}"/alias.zsh
+
+# shellcheck source=/dev/null
 source "${SSH_SOURCE_PATH}"/helpers.zsh
 
 # shellcheck source=/dev/null
