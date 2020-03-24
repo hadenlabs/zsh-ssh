@@ -122,3 +122,26 @@ if ! type -p rg > /dev/null; then
     # Apply the command to CTRL-T as well
     export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 fi
+
+function ssh::path::linux {
+    # shellcheck source=/dev/null
+    source "${SSH_SOURCE_PATH}"/linux.zsh
+}
+
+function ssh::path::osx {
+    # shellcheck source=/dev/null
+    source "${SSH_SOURCE_PATH}"/osx.zsh
+}
+
+function ssh::path::factory {
+    case "${OSTYPE}" in
+        darwin*)
+            ssh::path::osx
+            ;;
+        linux*)
+            ssh::path::linux
+            ;;
+    esac
+}
+
+resources::path::factory
