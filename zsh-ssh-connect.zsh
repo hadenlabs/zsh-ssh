@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #
-# Defines peco ssh connect and provides easy command line file and folder sharing.
+# Defines fzf ssh connect and provides easy command line file and folder sharing.
 #
 # Requirements:
 #  - fzf: https://github.com/junegunn/fzf
@@ -14,42 +14,16 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 
-ssh_package_name=fzf
+export ssh_package_name=fzf
 
-# ripgrep::install - install ripgrep
-function ripgrep::install {
-    if [ -x "$(command which brew)" ]; then
-        brew install ripgrep
-    fi
-}
+SSH_PLUGIN_DIR="$(dirname "${0}":A)"
+SSH_SOURCE_PATH="${SSH_PLUGIN_DIR}"/src
 
-# fzf::install - install fzf
-function fzf::install {
-    if [ -x "$(command which brew)" ]; then
-        brew install fzf
-    fi
-}
+export SSH_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew branch:develop"
+export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle luismayta/zsh-nvm branch:develop"
 
-if ! type -p rg > /dev/null; then ripgrep::install; fi
-if ! type -p fzf > /dev/null; then fzf::install; fi
-
-if [ -x "$(command which rg)" ]; then
-    # Setting rg as the default source for fzf
-    export FZF_DEFAULT_COMMAND='rg --files'
-
-    # Apply the command to CTRL-T as well
-    export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
-fi
-
-# assh::install - install assh
-function assh::install {
-    if [ -x "$(command which brew)" ]; then
-        brew install assh
-    fi
-}
-
-if ! type -p assh > /dev/null; then assh::install; fi
-if type -p assh > /dev/null; then alias ssh="assh wrapper ssh"; fi
+# shellcheck source=/dev/null
+source "${SSH_SOURCE_PATH}"/base.zsh
 
 function ssh-history {
     cat "${HISTFILE}" | grep -E "^ssh\s" | sort -nr | uniq
