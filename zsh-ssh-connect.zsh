@@ -25,17 +25,18 @@ export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle luismayta/zsh-
 # shellcheck source=/dev/null
 source "${SSH_SOURCE_PATH}"/base.zsh
 
-function ssh-history {
-    cat "${HISTFILE}" | grep -E "^ssh\s" | sort -nr | uniq
+function ssh::list {
+    less "${HOME}"/.ssh/config | grep -i '^host[[:space:]]*' | sed 's/^[Hh][Oo][Ss][Tt][[:space:]]*//;'
 }
 
-function ssh_connect {
-    BUFFER=$(fc -l -n 1 | ssh-history | \
-                 fzf-tmux --query="${LBUFFER}")
-
-    CURSOR=$#BUFFER # move cursor
-    zle -R -c       # refresh
+function ssh::connect {
+    local buffer
+    buffer=$(ssh::list | fzf )
+    if [ -n "${buffer}" ]; then
+        # shellcheck disable=SC2164
+        ssh "${buffer}"
+    fi
 }
 
-zle -N ssh_connect
-bindkey '^F' ssh_connect
+zle -N ssh::connect
+bindkey '^Xs' ssh::connect
