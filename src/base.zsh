@@ -142,4 +142,4 @@ function ssh::path::factory {
     esac
 }
 
-resources::path::factory
+ssh::path::factory
