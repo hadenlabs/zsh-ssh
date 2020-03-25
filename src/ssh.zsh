@@ -22,6 +22,6 @@ function ssh::connect {
     buffer=$(ssh::list | fzf )
     if [ -n "${buffer}" ]; then
         # shellcheck disable=SC2164
-        ssh "${buffer}"
+        echo -e "ssh ${buffer}" | ghead -c -1 | pbcopy
     fi
 }
