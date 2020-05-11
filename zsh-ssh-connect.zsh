@@ -14,7 +14,7 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 
-SSH_PLUGIN_DIR="$(dirname "${0}":A)"
+SSH_PLUGIN_DIR="$(dirname "${0}")"
 export SSH_SOURCE_PATH="${SSH_PLUGIN_DIR}"/src
 export SSH_CONFIG_FILE="${HOME}"/.ssh/config
 
@@ -23,6 +23,24 @@ export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle luismayta/zsh-
 
 # shellcheck source=/dev/null
 source "${SSH_SOURCE_PATH}"/base.zsh
+
+# ssh::cross::os functions for osx and linux
+function ssh::cross::os {
+
+    case "${OSTYPE}" in
+        linux*)
+            # shellcheck source=/dev/null
+            source "${SSH_SOURCE_PATH}"/linux.zsh
+            ;;
+        darwin*)
+            # shellcheck source=/dev/null
+            source "${SSH_SOURCE_PATH}"/osx.zsh
+            ;;
+    esac
+
+}
+
+ssh::cross::os
 
 # shellcheck source=/dev/null
 source "${SSH_SOURCE_PATH}"/alias.zsh
