@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #
-# Defines helpers for history for osx or linux.
+# Defines helpers for ssh for osx or linux.
 #
 # Authors:
 #   Luis Mayta <slovacus@gmail.com>
