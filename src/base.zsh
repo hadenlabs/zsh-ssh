@@ -57,6 +57,15 @@ function node::exist {
     echo 1
 }
 
+function mosh::exist {
+    if ! type -p mosh > /dev/null; then
+        echo 0
+        return
+    fi
+    echo 1
+}
+
+
 function jq::install {
     if [ "$(brew::exist)" -eq 0 ]; then
         message_warning "${SSH_MESSAGE_BREW}"
@@ -97,6 +106,15 @@ function node::install {
     message_warning "${SSH_MESSAGE_NVM}"
 }
 
+function mosh::install {
+    if [ "$(brew::exist)" -eq 0 ]; then
+        message_warning "${SSH_MESSAGE_BREW}"
+        return
+    fi
+    brew install mosh
+}
+
+
 # assh::install - install assh
 function assh::install {
     if [ "$(brew::exist)" -eq 0 ]; then
@@ -111,6 +129,7 @@ if [ "$(jq::exist)" -eq 0 ]; then jq::install; fi
 if [ "$(nvm::exist)" -eq 0 ]; then nvm::install; fi
 if [ "$(node::exist)" -eq 0 ]; then node::install; fi
 if [ "$(ripgrep::exist)" -eq 0 ]; then ripgrep:install; fi
+if [ "$(mosh::exist)" -eq 0 ]; then mosh::install; fi
 if [ "$(assh::exist)" -eq 0 ]; then assh::install; fi
 
 if ! type -p rg > /dev/null; then
