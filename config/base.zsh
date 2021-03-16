@@ -6,6 +6,4 @@ export ASSH_FILE_SETTINGS="${HOME}"/.ssh/assh.yml
 export SSH_MESSAGE_BREW="Please install brew or use antibody bundle hadenlabs/zsh-brew branch:develop"
 export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle hadenlabs/zsh-nvm branch:develop"
 
-export SSH_ROOT="${HOME}/.ssh"
-export SSH_ROOT_BIN="${SSH_ROOT}/bin"
 export SSH_PACKAGE_NAME=ssh
