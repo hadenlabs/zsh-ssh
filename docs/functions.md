@@ -2,26 +2,14 @@
 
 zsh ssh includes a small utility `ssh` to fetch and install new packages.
 
-#### `ssh::install`
+#### `ssh::list`
 
-Install ssh.
+list all of assh connects.
 
-#### `ssh::load`
+#### `ssh::build`
 
-Load path ssh.
+build the config ssh using assh.
 
-#### `ssh::upgrade`
+#### `ssh::connect`
 
-Upgrade version ssh.
-
-#### `ssh::package::all::install`
-
-Install all package of ssh.
-
-#### `ssh::install::versions`
-
-Install versions of config for ssh.
-
-#### `ssh::install::version::global`
-
-Install a version global of ssh.
+Allows you to search the list of assh hosts.

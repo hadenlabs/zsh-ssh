@@ -31,9 +31,19 @@ badges:
     image: https://img.shields.io/github/release/hadenlabs/zsh-ssh.svg
     url: https://github.com/hadenlabs/zsh-ssh/releases
 
+references:
+  - name: gko/ssh-connect
+    url: https://github.com/gko/ssh-connect
+    description: plugin reference ssh connect
+
+related:
+  - name: moul/assh
+    url: https://github.com/moul/assh
+    description: A transparent wrapper that adds support for regex
+
 # Short description of this project
 description: |-
-  zsh-ssh plugin for zsh.
+  zsh-ssh implement assh plugin for zsh.
 
 requirements: |-
 
