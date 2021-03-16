@@ -1,0 +1,18 @@
+#!/usr/bin/env ksh
+# -*- coding: utf-8 -*-
+
+function ssh::upgrade {
+    ssh::internal::ssh::upgrade
+}
+
+function ssh::list {
+    ssh::internal::ssh::list
+}
+
+function ssh::build {
+    ssh::internal::ssh::build
+}
+
+function ssh::connect {
+    ssh::internal::ssh::connect
+}

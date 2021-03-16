@@ -14,42 +14,17 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 
-SSH_PLUGIN_DIR="$(dirname "${0}")"
-export SSH_SOURCE_PATH="${SSH_PLUGIN_DIR}"/src
-export SSH_CONFIG_FILE="${HOME}"/.ssh/config
-
-export SSH_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew branch:develop"
-export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle luismayta/zsh-nvm branch:develop"
+# shellcheck disable=SC2034  # Unused variables left for readability
+ZSH_SSH_PATH=$(dirname "${0}")
 
 # shellcheck source=/dev/null
-source "${SSH_SOURCE_PATH}"/base.zsh
-
-# ssh::cross::os functions for osx and linux
-function ssh::cross::os {
-
-    case "${OSTYPE}" in
-        linux*)
-            # shellcheck source=/dev/null
-            source "${SSH_SOURCE_PATH}"/linux.zsh
-            ;;
-        darwin*)
-            # shellcheck source=/dev/null
-            source "${SSH_SOURCE_PATH}"/osx.zsh
-            ;;
-    esac
-
-}
-
-ssh::cross::os
+source "${ZSH_SSH_PATH}"/config/main.zsh
 
 # shellcheck source=/dev/null
-source "${SSH_SOURCE_PATH}"/alias.zsh
+source "${ZSH_SSH_PATH}"/internal/main.zsh
 
 # shellcheck source=/dev/null
-source "${SSH_SOURCE_PATH}"/helpers.zsh
-
-# shellcheck source=/dev/null
-source "${SSH_SOURCE_PATH}"/ssh.zsh
+source "${ZSH_SSH_PATH}"/pkg/main.zsh
 
 zle -N ssh::connect
 bindkey '^Xs' ssh::connect
