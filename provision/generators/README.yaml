@@ -21,6 +21,9 @@ github_repo: hadenlabs/zsh-ssh
 
 # Badges to display
 badges:
+  - name: GitHub tag (latest SemVer)
+    image: https://img.shields.io/github/v/tag/hadenlabs/zsh-ssh.svg?label=latest&sort=semver
+    url: https://github.com/hadenlabs/zsh-ssh/releases
   - name: Lint
     image: https://github.com/hadenlabs/zsh-ssh/actions/workflows/lint.yml/badge.svg?branch=develop
     url: https://github.com/hadenlabs/zsh-ssh/actions
@@ -49,9 +52,7 @@ requirements: |-
 
   This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-  ```{bash}
-  https://github.com/luismayta/zsh-core
-  ```
+  * [zsh-core](https://github.com/hadenlabs/zsh-core)
 
 installation:
   - 'docs/include/installation/oh-my-zsh.md'
