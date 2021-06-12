@@ -21,3 +21,7 @@ function ssh::internal::ssh::connect {
         echo -e "ssh ${buffer}" | ghead -c -1 | pbcopy
     fi
 }
+
+function ssh::internal::ssh::sync {
+    rsync -avzh --progress "${SSH_PATH_CONF}/" "${HOME}/.ssh/"
+}
