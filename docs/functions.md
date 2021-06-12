@@ -13,3 +13,7 @@ build the config ssh using assh.
 #### `ssh::connect`
 
 Allows you to search the list of assh hosts.
+
+#### `ssh::sync`
+
+Synchronizes the configurations that are in `conf/assh.yml`
