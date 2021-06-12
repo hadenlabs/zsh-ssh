@@ -74,6 +74,10 @@ build the config ssh using assh.
 
 Allows you to search the list of assh hosts.
 
+#### `ssh::sync`
+
+Synchronizes the configurations that are in `conf/assh.yml`
+
 ## Related Projects
 
 Check out these related projects.
