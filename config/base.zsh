@@ -3,6 +3,7 @@
 
 export SSH_CONFIG_FILE="${HOME}"/.ssh/config
 export ASSH_FILE_SETTINGS="${HOME}"/.ssh/assh.yml
+export SSH_PATH_CONF="${ZSH_SSH_PATH}"/conf
 export SSH_MESSAGE_BREW="Please install brew or use antibody bundle hadenlabs/zsh-brew branch:develop"
 export SSH_MESSAGE_NVM="Please install NVM or use antibody bundle hadenlabs/zsh-nvm branch:develop"
 

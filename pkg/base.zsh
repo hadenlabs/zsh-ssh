@@ -16,3 +16,7 @@ function ssh::build {
 function ssh::connect {
     ssh::internal::ssh::connect
 }
+
+function ssh::sync {
+    ssh::internal::ssh::sync
+}
